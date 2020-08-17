@@ -1,4 +1,4 @@
-.div {
+.region {
     margin-left: 400px;
     width: 200px;
     height: 200px;
@@ -7,7 +7,7 @@
     float: left;
 }
 
-.p {
+#cities {
     position: absolute;
 }
 

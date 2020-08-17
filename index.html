@@ -10,47 +10,39 @@
 
 <body>
     <div id="map">
-        <div class="div" id="wrapper1">
+        <div class="region" id="northwest">
         </div>
-        <div class="div" id="wrapper2">
+        <div class="region" id="central">
         </div>
-        <div class="div" id="wrapper3">
+        <div class="region" id="siberia">
         </div>
+        <div id="cities"></div>
     </div>
+
+
 
 
 </body>
 <script>
     const regions = {
-        wrapper1: "<div class='p'><p>1</p><p>asdas</p><p>asd</p><p>asd</p></div>",
-        wrapper2: "<div class='p'><p>2</p><p>asdas</p><p>asd</p><p>asd</p></div>",
-        wrapper3: "<div class='p'><p>3</p><p>asdas</p><p>asd</p><p>asd</p></div>"
+        northwest: "Saint-P",
+        central: "Moscow",
+        siberia: "Novosibirsk"
     };
 
 
-    map.addEventListener('click', getMap, true);
+    map.addEventListener('click', getMap);
 
     function getMap(event) {
-        let wrapper = event.target.id;
-
-        console.log(regions);
-        let elem = document.getElementById(wrapper);
-        elem.innerHTML = regions[wrapper];
-        let elemP = document.querySelector(".p");
-        console.log(elemP);
-        elemP.style.left = event.pageX + "px";
-        elemP.style.top = event.pageY + "px";
-
-        // elem.innerHTML = regions[wrapper];
-        // console.log(regions[wrapper]);
-        // elem.InnerHTML.style.left = event.pageX + "px";
-        // // event.target.style.top = event.pageY + "px";
-        // return elem;
-    }
-
-    function showInfo() {
+        let targetClickId = event.target.id;
+        let html = `<p class="city">${regions[targetClickId]}</p>`;
+        cities.innerHTML = html;
+        console.log(html);
+        cities.style.left = event.pageX + "px";
+        cities.style.top = event.pageY + "px";
 
     }
+
 
 </script>
 
