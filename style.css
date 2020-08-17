@@ -11,27 +11,6 @@
     position: absolute;
 }
 
-/* .wrapper1 {
-    margin-left: 400px;
-    width: 200px;
-    height: 200px;
-    background-color: green;
-    margin: 10px;
-    float: left;
+a {
+    display: block;
 }
-.wrapper2 {
-    margin-left: 400px;
-    width: 200px;
-    height: 200px;
-    background-color: green;
-    margin: 10px;
-    float: left;
-}
-.wrapper3 {
-    margin-left: 400px;
-    width: 200px;
-    height: 200px;
-    background-color: green;
-    margin: 10px;
-    float: left;
-} */
