@@ -20,72 +20,31 @@
     </div>
 
     <div id="carddep">
-
+        <div id="card-dep">
+            <div class="depaty-list">
+                <div class="depaty-list__title">
+                    <h2></h2>
+                </div>
+                <div class="depaty-list__cards cards">
+                    <div class="left-side">
+                        <h1 class="cards__title title"> </h1>
+                        <p class="cards__description description"></p>
+                        <div class="cards__links links"> <a id="vk" class="links" href="">Вконтакте</a> <a id="fb"
+                                class="links" href="">Фэйсбук</a> <a id="inst" class="links" href="">Инстаграм</a>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="depaty-list__photo"> <img src="" alt="depaty"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
 </body>
-<script>
-    const regions = {
-        northwest: "<a id='northwest' href='#'>spb</a><a id='central' href='#'>ladoga</a><a href='#'>murmanks</a>",
-        central: "Moscow",
-        siberia: "Novosibirsk"
-    };
 
-    const depatylist = {
-        northwest: {
-            title: "В этом году в республике Коми выбирают губернатора",
-            name: "Кандидат от ЛДПР Андрей Никитин",
-            description: "Депутат МО ГО «Усинск» Отец троих детей, бывший военный",
-            url: {
-                vk: "vk.com",
-                fb: "fb.com",
-                inst: "instagram.com",
-                tw: "twitter.com"
-            }
-        },
-        central: {
-            title: "В этом году в республике говно выбирают губернатора",
-            name: "Кандидат от говна Андрей говнов",
-            description: "Депутат МО ГО говно Отец троих говна, бывший говно",
-            url: {
-                vk: "vk.com",
-                fb: "fb.com",
-                inst: "instagram.com",
-                tw: "twitter.com"
-            }
-        },
-        siberia: {}
-    }
-
-
-
-
-
-    map.addEventListener('click', getMap);
-
-    function getMap(event) {
-        let targetClickId = event.target.id;
-        if (typeof regions[targetClickId] !== "undefined") {
-            let html = `<p class="city">${regions[targetClickId]}</p>`;
-            cities.innerHTML = html;
-            console.log(html);
-            cities.style.left = event.pageX + "px";
-            cities.style.top = event.pageY + "px";
-
-        }
-    }
-
-    cities.addEventListener('click', showDeputy);
-
-    function showDeputy(event) {
-        let targetClickId = event.target.id;
-        let html = `<div id="card-dep"> <div class="depaty-list"> <div class="depaty-list__title"> <h2>${depatylist[targetClickId].title}</h2> </div> <div class="depaty-list__cards cards"> <div class="left-side"> <h1 class="cards__title title">${depatylist[targetClickId].name} </h1> <p class="cards__description description">${depatylist[targetClickId].description} </p> <div class="cards__links links"> <a class="links" href="${depatylist[targetClickId].url.vk}">Вконтакте</a> <a class="links" href="${depatylist[targetClickId].url.fb}">Фэйсбук</a> <a class="links" href="${depatylist[targetClickId].url.inst}">Инстаграм</a> <a class="links" href="${depatylist[targetClickId].url.tw}">Твиттер</a> </div> </div> <div class="right-side"> <div class="depaty-list__photo"> <img src="" alt="depaty"> </div> </div> </div> </div> </div>`;
-        console.log(html);
-        carddep.innerHTML = html;
-    }
-
-</script>
+<script src="/script.js"></script>
 
 </html>
